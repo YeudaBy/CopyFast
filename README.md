@@ -1,25 +1,36 @@
 # CopyFast
 
-CopyFast היא אפליקציה פשוטה ונוחה למערכת ההפעלה macOS ששומרת היסטוריה של כל מה שהעתקתם (טקסטים ותמונות), ומאפשרת לכם לחפש, לסנן ולנהל את ההיסטוריה בקלות.
+<p align="center">
+  <img src="https://img.shields.io/badge/website-up-green?style=for-the-badge&logo=vercel" alt="Website Status" />
+  <a href="https://github.com/yeudaby/CopyFast/releases/latest">
+    <img src="https://img.shields.io/github/v/release/yeudaby/CopyFast?style=for-the-badge&logo=github" alt="Latest Release" />
+  </a>
+  <a href="https://github.com/yeudaby/CopyFast/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue?style=for-the-badge" alt="License" />
+  </a>
+</p>
+
+<p align="center">
+  <strong><a href="http://copyfast.yeudaby.com/">🌐 בקר באתר הרשמי 🌐</a></strong>
+</p>
+
+CopyFast הוא מנהל לוח חכם ונוח למערכת ההפעלה macOS. הוא שומר היסטוריה של כל מה שהעתקתם (טקסטים ותמונות), ומאפשר לכם לחפש, לסנן ולנהל את ההיסטוריה בקלות, ישירות מה-MenuBar.
 
 ## הדגמה
 
 ![צילום מסך של האפליקציה](main-screenshot.png)
 
-**הערה:** להדגמה מלאה, ניתן לצפות בסרטון `CopyFast screen recored.mov` שנמצא בפרויקט. מומלץ להמיר אותו ל-GIF ולהוסיף אותו כאן.
-
 ## :rocket: פיצ'רים
 
-- **שמירת היסטוריה:** האפליקציה שומרת באופן אוטומטי כל טקסט או תמונה שאתם מעתיקים.
-- **חיפוש מתקדם:** מצאו בקלות פריטים שהעתקתם בעבר באמצעות שורת חיפוש.
-- **סימון מועדפים:** סמנו פריטים חשובים כ"מועדפים" כדי לגשת אליהם במהירות.
-- **סינון לפי תגיות:** הוסיפו תגיות לפריטים וסננו את הרשימה כדי לראות רק את מה שרלוונטי לכם.
-- **ממשק מודרני:** ממשק משתמש נקי ומודרני עם אפקטי שקיפות, המשתלב באופן מושלם עם macOS.
+- **היסטוריה חכמה:** שמירה אוטומטית של טקסטים ותמונות מהלוח. שום דבר לא הולך לאיבוד.
+- **חיפוש מיידי:** מצאו כל פריט תוך שניות עם יכולות חיפוש מתקדמות.
+- **ארגון וסדר:** סמנו מועדפים והוסיפו תגיות כדי לשמור על סדר ונגישות.
+- **ממשק מודרני:** ממשק משתמש נקי ומודרני בהשראת macOS, עם תמיכה במצב כהה.
 - **מחיקת פריטים:** נהלו את היסטוריית ההעתקות שלכם ומחקו פריטים שאינכם צריכים עוד.
 
 ## :computer: איך להשתמש
 
-1.  הורידו את גרסת ההתקנה האחרונה מה-[Releases](https://github.com/YOUR_USERNAME/CopyFast/releases).
+1.  **הורידו את הגרסה האחרונה** מהאתר הרשמי: **[copyfast.yeudaby.com](http://copyfast.yeudaby.com/)**
 2.  פתחו את קובץ ה-`.dmg` וגררו את `CopyFast.app` לתיקיית היישומים שלכם.
 3.  הפעילו את האפליקציה. היא תרוץ ברקע ותשמור את כל מה שתעתיקו.
 4.  כדי לפתוח את חלון ההיסטוריה, לחצו על אייקון האפליקציה בשורת המשימות.

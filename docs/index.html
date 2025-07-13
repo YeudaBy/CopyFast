@@ -1,86 +1,132 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CopyFast - מנהל הלוח החכם שלך</title>
+
+    <!-- Primary Meta Tags -->
+    <title>CopyFast - מנהל הלוח החכם שלך ל-macOS</title>
+    <meta name="title" content="CopyFast - מנהל הלוח החכם שלך ל-macOS">
+    <meta name="description"
+        content="CopyFast הוא מנהל לוח חכם ל-macOS. שמרו היסטוריה של העתקות, חפשו, וארגנו את כל מה שהעתקתם, ישירות מה-MenuBar. תומך בטקסטים, תמונות, ועוד.">
+    <meta name="color-scheme" content="light dark">
+    <link rel="icon" type="image/png" href="images/CF-nobg.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yeudaby.github.io/CopyFast/">
+    <meta property="og:title" content="CopyFast - מנהל הלוח החכם שלך ל-macOS">
+    <meta property="og:description"
+        content="CopyFast הוא מנהל לוח חכם ל-macOS. שמרו היסטוריה של העתקות, חפשו, וארגנו את כל מה שהעתקתם, ישירות מה-MenuBar. תומך בטקסטים, תמונות, ועוד.">
+    <meta property="og:image" content="https://yeudaby.github.io/CopyFast/images/bg-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yeudaby.github.io/CopyFast/">
+    <meta property="twitter:title" content="CopyFast - מנהל הלוח החכם שלך ל-macOS">
+    <meta property="twitter:description"
+        content="CopyFast הוא מנהל לוח חכם ל-macOS. שמרו היסטוריה של העתקות, חפשו, וארגנו את כל מה שהעתקתם, ישירות מה-MenuBar. תומך בטקסטים, תמונות, ועוד.">
+    <meta property="twitter:image" content="https://yeudaby.github.io/CopyFast/images/bg-image.png">
+
+    <!-- Styles and Fonts -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;800&display=swap" rel="stylesheet">
-    <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Scripts -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZK33R16ZFW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZK33R16ZFW');
+    </script>
 </head>
-<body>
+
+<body class="dark-mode">
+    <div class="background-gradient"></div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-left">
+                <img src="images/CF-nobg.png" alt="CopyFast Logo" class="nav-logo">
+                <span>CopyFast</span>
+            </div>
+            <div class="nav-right">
+                <a href="https://github.com/yeudaby/CopyFast" target="_blank" class="nav-link github-link">
+                    <i data-feather="github"></i>
+                    <span>GitHub</span>
+                </a>
+                <button id="dark-mode-toggle" class="dark-mode-toggle">
+                    <i data-feather="moon" class="moon-icon"></i>
+                    <i data-feather="sun" class="sun-icon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
     <header>
         <div class="container">
             <img src="images/CF-nobg.png" alt="CopyFast App Icon" class="logo">
-            <h1>CopyFast</h1>
-            <p class="subtitle">הדרך החכמה לנהל את היסטוריית ההעתקות שלך ב-macOS</p>
+            <h1>העתק. הדבק. בקלות.</h1>
+            <p class="subtitle">CopyFast הוא מנהל הלוח שחיכיתם לו. שמרו היסטוריה, חפשו, וארגנו את כל מה שהעתקתם, ישירות
+                מה-MenuBar.</p>
+            <a href="https://github.com/yeudaby/CopyFast/releases/latest" target="_blank" class="cta-button">הורדה
+                ל-macOS</a>
+            <p class="release-info">הגרסה האחרונה זמינה להורדה ישירה</p>
         </div>
     </header>
 
     <main>
-        <section class="hero">
+        <section id="screenshots" class="screenshots">
             <div class="container">
-                <h2>העתקה. הדבקה. בלי לחשוב פעמיים.</h2>
-                <p>CopyFast שומרת כל מה שהעתקתם, טקסט או תמונה, ומאפשרת לכם לחזור לזה בכל רגע. תפסיקו לאבד מידע חשוב ותתחילו לעבוד חכם יותר.</p>
-                <a href="https://github.com/yeudaborodyanski/CopyFast/releases/latest" class="cta-button">הורדה ל-macOS</a>
-                 <p class="release-info">הורדת הגרסה האחרונה מ-GitHub</p>
+                <img src="images/main-screenshot.png" alt="צילום מסך של אפליקציית CopyFast" class="screenshot-img">
             </div>
         </section>
 
         <section class="features">
             <div class="container">
-                <h2>פיצ'רים שהופכים הכל לפשוט יותר</h2>
+                <h2>עוצמה ופשטות, במקום אחד</h2>
                 <div class="feature-grid">
                     <div class="feature-item">
-                        <i data-feather="database"></i>
-                        <h3>שמירת היסטוריה</h3>
-                        <p>שמירה אוטומטית של טקסטים ותמונות מהלוח, זמינים תמיד.</p>
+                        <i data-feather="archive"></i>
+                        <h3>היסטוריה חכמה</h3>
+                        <p>שומר טקסטים ותמונות באופן אוטומטי. שום דבר לא הולך לאיבוד.</p>
                     </div>
                     <div class="feature-item">
                         <i data-feather="search"></i>
-                        <h3>חיפוש מהיר</h3>
-                        <p>מצאו כל פריט שהעתקתם עם חיפוש מיידי וחכם.</p>
+                        <h3>חיפוש מיידי</h3>
+                        <p>מצאו כל פריט תוך שניות עם יכולות חיפוש מתקדמות.</p>
                     </div>
                     <div class="feature-item">
                         <i data-feather="star"></i>
-                        <h3>מועדפים ותגיות</h3>
-                        <p>ארגנו את ההיסטוריה עם מועדפים ותגיות לגישה נוחה.</p>
+                        <h3>ארגון וסדר</h3>
+                        <p>סמנו מועדפים והוסיפו תגיות כדי לשמור על סדר ונגישות.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="screenshots" class="screenshots">
-             <div class="container">
-                <h2>מבט מבפנים</h2>
-                <img src="images/main-screenshot.png" alt="צילום מסך של אפליקציית CopyFast" class="screenshot-img">
-             </div>
-        </section>
-
         <section class="demo">
             <div class="container">
                 <h2>צפו איך זה עובד</h2>
-                <video controls src="images/demo.mov" width="800">
-                    Your browser does not support the video tag.
-                </video>
+                <img src="images/demo.gif" alt="CopyFast Demo GIF" class="demo-gif">
             </div>
         </section>
-
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 CopyFast. פותח על ידי יהודה בורודיאנסקי.</p>
-            <p><a href="https://github.com/yeudaborodyanski/CopyFast">פרויקט ב-GitHub</a></p>
+            <p>&copy; 2024 CopyFast. פותח על ידי <a href="https://yeudaby.com" target="_blank">yeudaby</a>.</p>
         </div>
     </footer>
 
-    <!-- Activate Feather Icons -->
-    <script>
-      feather.replace()
-    </script>
+    <script src="script.js"></script>
 </body>
-</html> 
+
+</html>
