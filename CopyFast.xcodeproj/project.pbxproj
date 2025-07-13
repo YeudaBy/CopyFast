@@ -29,9 +29,33 @@
 		780917152E236D75007515EA /* CopyFastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CopyFastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		780917352E23724A007515EA /* Exceptions for "CopyFast" folder in "CopyFast" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ClipboardEntry.swift,
+			);
+			target = 780916FA2E236D74007515EA /* CopyFast */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		780917362E23724A007515EA /* Exceptions for "CopyFast" folder in "Copy Bundle Resources" phase from "CopyFast" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 780916F92E236D74007515EA /* Resources */;
+			membershipExceptions = (
+				ClipboardEntry.swift,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		780916FD2E236D74007515EA /* CopyFast */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				780917352E23724A007515EA /* Exceptions for "CopyFast" folder in "CopyFast" target */,
+				780917362E23724A007515EA /* Exceptions for "CopyFast" folder in "Copy Bundle Resources" phase from "CopyFast" target */,
+			);
 			path = CopyFast;
 			sourceTree = "<group>";
 		};
