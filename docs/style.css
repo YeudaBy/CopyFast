@@ -153,6 +153,14 @@ section { text-align: center; padding: 3rem 0; }
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
 }
 
+.demo-gif {
+    max-width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color-light);
+    transition: border-color 0.3s ease;
+}
+
 footer {
     text-align: center;
     padding: 3rem 0;
