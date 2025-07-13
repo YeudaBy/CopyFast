@@ -10,6 +10,10 @@
 	<string>Copy Fast</string>
 	<key>CFBundleExecutable</key>
 	<string>CopyFast</string>
+	<key>CFBundleIconFile</key>
+	<string>AppIcon</string>
+	<key>CFBundleIconName</key>
+	<string>AppIcon</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.yeudaby.CopyFast</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -19,14 +23,10 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>0.0.4</string>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
 		<string>MacOSX</string>
-	</array>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict/>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
@@ -50,5 +50,7 @@
 	<string>public.app-category.productivity</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>14.0</string>
+	<key>LSUIElement</key>
+	<true/>
 </dict>
 </plist>

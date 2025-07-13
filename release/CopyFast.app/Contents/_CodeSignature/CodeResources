@@ -4,6 +4,14 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Resources/AppIcon.icns</key>
+		<data>
+		Alv9hERSFibSsWABIN0GDXaVW2E=
+		</data>
+		<key>Resources/Assets.car</key>
+		<data>
+		b2xX7N48rPcCkNeNaqgJWZwbXlc=
+		</data>
 		<key>Resources/ClipboardModel.momd/ClipboardModel.mom</key>
 		<data>
 		vhfWMBTeClgtzHG+EjJv/qSD9lg=
@@ -12,9 +20,31 @@
 		<data>
 		7YPmxq6MrUJ7ijyKT9CoGSwC2kE=
 		</data>
+		<key>Resources/appstore.png</key>
+		<data>
+		UdN14hTPnoIOhycZBHTdK9HkKGI=
+		</data>
+		<key>Resources/playstore.png</key>
+		<data>
+		bDcmuWFRO/E3D+/VCTWG6BBPrRc=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Resources/AppIcon.icns</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			PRvKyN+QjNAHC0u5ZZPyp+kUHecU3vmpjVpYcvqgyCA=
+			</data>
+		</dict>
+		<key>Resources/Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Ffb/VxB7E1gR+AUEnlMrN/8plAMc9raomK1Ly8cu7os=
+			</data>
+		</dict>
 		<key>Resources/ClipboardModel.momd/ClipboardModel.mom</key>
 		<dict>
 			<key>hash2</key>
@@ -27,6 +57,20 @@
 			<key>hash2</key>
 			<data>
 			58ovypq2C5jTqN5DAWNcenw2IVgde0lSCnLO/hrk/Y4=
+			</data>
+		</dict>
+		<key>Resources/appstore.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			FnlU6b5onToL723zhs3EUaZ0zGVXULVkfVK3Fw8NzRw=
+			</data>
+		</dict>
+		<key>Resources/playstore.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Ox7wr7pDgPCq0FJOKdc8Bhfk+9p6uypBbEP7WQ4n2XE=
 			</data>
 		</dict>
 	</dict>
