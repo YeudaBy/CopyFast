@@ -7,63 +7,77 @@ struct ClipRowView: View {
 
     @State private var showingTagPrompt = false
     @State private var newTag = ""
+    @State private var checkmarkOpacity: Double = 0.0 // State to control the checkmark's opacity
 
     var body: some View {
-        HStack(alignment: .top) {
-            VStack(alignment: .leading, spacing: 4) {
-                if entry.type == "image", let data = entry.data, let nsImage = NSImage(data: data) {
-                    Image(nsImage: nsImage)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(height: 100)
-                } else if let content = entry.content {
-                    LinkTextView(text: content)
-                        .lineLimit(2)
-                        .font(.body)
-                } else {
-                    Text("")
+        ZStack { // Use ZStack to overlay the checkmark animation
+            HStack(alignment: .top) {
+                VStack(alignment: .leading, spacing: 4) {
+                    if entry.type == "image", let data = entry.data, let nsImage = NSImage(data: data) {
+                        Image(nsImage: nsImage)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height: 100)
+                    } else if let content = entry.content {
+                        LinkTextView(text: content)
+                            .lineLimit(2)
+                            .font(.body)
+                    } else {
+                        Text("")
+                    }
+
+                    Text(entry.date ?? Date(), style: .time)
+                        .font(.caption)
+                        .foregroundColor(.gray)
                 }
 
-                Text(entry.date ?? Date(), style: .time)
-                    .font(.caption)
-                    .foregroundColor(.gray)
+                Spacer()
+
+                Button(action: toggleFavorite) {
+                    Image(systemName: entry.isFavorite ? "star.fill" : "star")
+                        .foregroundColor(entry.isFavorite ? .yellow : .gray)
+                }
+                .buttonStyle(PlainButtonStyle())
+
+                Button(action: pasteEntry) {
+                    Image(systemName: "doc.on.clipboard")
+                }
+                .buttonStyle(PlainButtonStyle())
+
+                Button(action: {
+                    newTag = ""
+                    showingTagPrompt = true
+                }) {
+                    Image(systemName: "tag")
+                }
+                .buttonStyle(PlainButtonStyle())
+                .sheet(isPresented: $showingTagPrompt) {
+                    TagPromptView(newTag: $newTag, onComplete: { tag in
+                        if !tag.isEmpty {
+                            entry.tags = (entry.tags?.isEmpty ?? true) ? tag : (entry.tags! + "," + tag)
+                            try? viewContext.save()
+                        }
+                        showingTagPrompt = false
+                    }, onCancel: {
+                        showingTagPrompt = false
+                    })
+                    .frame(width: 300, height: 120)
+                    .padding()
+                }
+            }
+            .padding(.vertical, 4)
+            .contentShape(Rectangle())
+            .onTapGesture {
+                pasteEntry()
             }
 
-            Spacer()
-
-            Button(action: toggleFavorite) {
-                Image(systemName: entry.isFavorite ? "star.fill" : "star")
-                    .foregroundColor(entry.isFavorite ? .yellow : .gray)
-            }
-            .buttonStyle(PlainButtonStyle())
-
-            Button(action: pasteEntry) {
-                Image(systemName: "doc.on.clipboard")
-            }
-            .buttonStyle(PlainButtonStyle())
-
-            Button(action: {
-                newTag = ""
-                showingTagPrompt = true
-            }) {
-                Image(systemName: "tag")
-            }
-            .buttonStyle(PlainButtonStyle())
-            .sheet(isPresented: $showingTagPrompt) {
-                TagPromptView(newTag: $newTag, onComplete: { tag in
-                    if !tag.isEmpty {
-                        entry.tags = (entry.tags?.isEmpty ?? true) ? tag : (entry.tags! + "," + tag)
-                        try? viewContext.save()
-                    }
-                    showingTagPrompt = false
-                }, onCancel: {
-                    showingTagPrompt = false
-                })
-                .frame(width: 300, height: 120)
-                .padding()
-            }
+            // Checkmark animation overlay
+            Image(systemName: "checkmark.circle.fill")
+                .font(.system(size: 40))
+                .foregroundColor(.green)
+                .opacity(checkmarkOpacity)
+                .animation(.easeOut(duration: 0.5), value: checkmarkOpacity) // Animate opacity changes
         }
-        .padding(.vertical, 4)
     }
 
     private func toggleFavorite() {
@@ -74,7 +88,18 @@ struct ClipRowView: View {
     private func pasteEntry() {
         let pasteboard = NSPasteboard.general
         pasteboard.clearContents()
-        pasteboard.setString(entry.content ?? "", forType: .string)
+
+        if entry.type == "image", let data = entry.data, let nsImage = NSImage(data: data) {
+            pasteboard.writeObjects([nsImage])
+        } else if let content = entry.content {
+            pasteboard.setString(content, forType: .string)
+        }
+
+        // Trigger the checkmark animation
+        checkmarkOpacity = 1.0 // Make it fully visible
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { // After 0.8 seconds
+            checkmarkOpacity = 0.0 // Fade it out
+        }
     }
 }
 
